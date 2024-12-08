@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #0a1929;
+  color: #ffffff;
+}
+
+.hero-section {
+  background-image: linear-gradient(rgba(10, 25, 41, 0.85), rgba(10, 25, 41, 0.85)),
+    url('https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.glass-card {
+  background: rgb(28, 102, 213);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom Card Container Style */
+.card-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  text-align: left;
+  border: 1px solid #e5e7eb; /* Light border to distinguish cards */
+}
+
+.card-container:hover {
+  transform: translateY(-10px); /* Slight upward movement on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Card Title Style */
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e3a8a; /* Dark blue color */
+  margin-bottom: 1rem;
+}
+
+/* Card Description Style */
+.card-description {
+  font-size: 1rem;
+  color: #4b5563; /* Medium gray text */
+  line-height: 1.6; /* Improved line height for readability */
+  margin-bottom: 1rem;
+}
+
+/* Responsive Card Grid */
+@media (min-width: 640px) {
+  .card-container {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for larger screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-container {
+    padding: 2.5rem; /* Slightly larger padding on larger screens */
+  }
+}
